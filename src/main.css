@@ -17,7 +17,7 @@ body {
 }
 
 .pesquisa {
-  height: 226px;
+  height: 350px;
   background: linear-gradient(
       90deg,
       rgba(1, 4, 58, 0.8) 0%,
@@ -73,11 +73,10 @@ body {
 .sessaoPrincipal {
   display: flex;
   flex-wrap: wrap;
-  padding: 0 50px;
+  padding: 50px 50px;
   flex-grow: 1;
   flex-direction: column;
   justify-content: center;
-  background-color: red;
   align-items: center;
 }
 
@@ -87,7 +86,7 @@ body {
   flex-wrap: wrap;
   height: 50%;
   width: 50%;
-  background-color: blue;
+  gap: 20px;
 }
 
 .sessaoPrincipal .baseDeConhecimento .mobbyCidade {
@@ -111,7 +110,6 @@ body {
   display: flex;
   padding: 50px;
   justify-content: center;
-  background-color: orange;
 }
 
 .sessaoPrincipal .carrossel .imagens {
@@ -133,7 +131,7 @@ body {
 
 .sessaoPrincipal .carrossel .imagens .controlesDeImagem .controle {
   border: solid white;
-  width: 15px;  
+  width: 15px;
   height: 15px;
   border-radius: 50%;
 }
