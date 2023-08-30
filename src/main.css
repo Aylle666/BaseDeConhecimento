@@ -1,0 +1,139 @@
+body {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.topo {
+  display: flex;
+  align-items: center;
+  height: 135px;
+}
+
+.topo .logo {
+  width: 176px;
+  height: auto;
+  padding-left: 2rem;
+}
+
+.pesquisa {
+  height: 226px;
+  background: linear-gradient(
+      90deg,
+      rgba(1, 4, 58, 0.8) 0%,
+      rgba(5, 12, 194, 0.8) 36.98%,
+      rgba(0, 10, 255, 0.8) 72.92%,
+      rgba(0, 255, 71, 0.26) 95.83%,
+      rgba(0, 240, 255, 0.56) 100%
+    ),
+    rgba(13, 204, 229, 0.94);
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+}
+
+.pesquisa .texto {
+  color: white;
+  font-size: 30px;
+  font-family: sans-serif;
+}
+
+.pesquisa .caixaDePesquisa {
+  max-width: 544px;
+  width: 100%;
+  height: 53px;
+  border-radius: 40px;
+  background: #fff;
+  align-items: center;
+  box-shadow: 0px 0px 5px black;
+  border: 0px;
+  padding: 18px 22px;
+  outline-style: none;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.pesquisa .caixaDePesquisa #caixaDePesquisa {
+  border: 0;
+  flex-grow: 1;
+}
+
+.pesquisa .caixaDePesquisa #caixaDePesquisa::placeholder {
+  color: #746a6a;
+  font-family: sans-serif;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  text-align: center;
+}
+
+.sessaoPrincipal {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 0 50px;
+  flex-grow: 1;
+  flex-direction: column;
+  justify-content: center;
+  background-color: red;
+  align-items: center;
+}
+
+.sessaoPrincipal .baseDeConhecimento {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  height: 50%;
+  width: 50%;
+  background-color: blue;
+}
+
+.sessaoPrincipal .baseDeConhecimento .mobbyCidade {
+}
+
+.sessaoPrincipal .baseDeConhecimento .mobbyDocs {
+}
+
+.sessaoPrincipal .baseDeConhecimento .mobbyCandidato {
+}
+
+.sessaoPrincipal .baseDeConhecimento .ticket {
+}
+
+.sessaoPrincipal .baseDeConhecimento .solucoes {
+}
+
+.sessaoPrincipal .carrossel {
+  width: 50%;
+  height: 50%;
+  display: flex;
+  padding: 50px;
+  justify-content: center;
+  background-color: orange;
+}
+
+.sessaoPrincipal .carrossel .imagens {
+  background-image: url("https://dados-suporte.s3.sa-east-1.amazonaws.com/%5BMOBBY+APPS%5D+SLIDE+CENTRAL+DE+AJUDA+copiar.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  position: relative;
+  height: 100%;
+  width: 100%;
+}
+
+.sessaoPrincipal .carrossel .imagens .controlesDeImagem {
+  position: absolute;
+  gap: 12px;
+  display: flex;
+  bottom: 20px;
+  left: 20px;
+}
+
+.sessaoPrincipal .carrossel .imagens .controlesDeImagem .controle {
+  border: solid white;
+  width: 15px;  
+  height: 15px;
+  border-radius: 50%;
+}

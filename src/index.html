@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title>Base de conhecimento</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" type="text/css" media="screen" href="main.css" />
+    <link rel="stylesheet" type="text/css" media="screen" href="custom.css" />
+  </head>
+  <body>
+    <div class="topo">
+      <img class="logo" src="../assets/image/Mobby.png" />
+    </div>
+    <div class="pesquisa">
+      <h2 class="texto">Olá, como podemos te ajudar?</h2>
+      <label for="caixaDePesquisa" class="caixaDePesquisa">
+        <img src="../assets/image/Lupa.png" alt="lupa" />
+        <input
+          placeholder="Digite sua dúvida"
+          type="text"
+          id="caixaDePesquisa"
+        />
+      </label>
+    </div>
+    <div class="sessaoPrincipal">
+      <div class="baseDeConhecimento">
+        <div class="mobbyCidade conteudoDaBaseDeConhecimento30">
+          <img src="../assets/image/Logo Mobby Cidade.png" alt="mobbyCidade" />
+          <p>Base de conhecimento Mobby Cidade</p>
+        </div>
+        <div class="mobbyDocs conteudoDaBaseDeConhecimento30">
+          <img src="../assets/image/Docs.png" alt="mobbyDocs" />
+          <p>Base de conhecimento Mobby Docs</p>
+        </div>
+        <div class="mobbyCandidato conteudoDaBaseDeConhecimento30">
+          <img src="../assets/image//Group 1.png" alt="mobbyCandidato" />
+          <p>Base de conhecimento Mobby Candidato</p>
+        </div>
+        <div class="ticket conteudoDaBaseDeConhecimento50">
+          <img src="../assets/image/internet+1 1.png" alt="tickets" />
+          <p>Veja seus tickets</p>
+        </div>
+        <div class="solucoes conteudoDaBaseDeConhecimento50">
+          <img src="../assets/image/entrevista+1+(1) 1.png" alt="solucoes" />
+          <p>Nossas soluções</p>
+        </div>
+      </div>
+      <div class="carrossel">
+        <div class="imagens">
+          <div class="controlesDeImagem">
+            <div class="controle"></div>
+            <div class="controle"></div>
+            <div class="controle"></div>
+            <div class="controle"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
+
+<!-- esse bloco é filho do carrossel -->
+
+<!-- STEPS
+  1 - Criar uma div filha de carrossel com a class images 
+  2 - criar uma div neta de carrossel com class controlesDeImagem
+  3 - criar 4 divs com class controle filha de controlesDeImagem
+-->
+
+<!-- NO CSS:
+  1 - baseDeConhecimento tem q ter 50% da altura
+  2 - carrossel tem q ter os 50% da altura restante
+-->
