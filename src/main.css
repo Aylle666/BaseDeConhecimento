@@ -131,3 +131,28 @@ body {
   height: 15px;
   border-radius: 50%;
 }
+
+/*tablet*/
+@media only screen and (max-width: 768px) and (min-width: 425px) {
+  /*Sempre que a resolução da tela for entre 768 à 425px a telera receberá as seguintes alterações*/
+  .pesquisa .texto {
+    font-size: 22px;
+  }
+
+  .pesquisa .caixaDePesquisa #caixaDePesquisa::placeholder {
+    font-size: 18px !important;
+  }
+
+  .pesquisa .caixaDePesquisa {
+    padding-top: 10px;
+    padding-bottom: 10px;
+  }
+
+  .pesquisa .caixaDePesquisa img {
+    width: 22px;
+  }
+
+  
+}
+
+
