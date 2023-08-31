@@ -5,24 +5,16 @@ body {
 }
 
 .topo {
-  display: flex;
-  align-items: center;
-
-  /* height: 135px; a altura tem q ser a soma to tamanho do conteúdo e os respectivos espaçamentos (paddings e margins) *1 */
-  /* O padding tem q ser aplicado na caixa e não no conteúdo *2 */
-  padding: 41px 1rem; /* 41px em cima e abaixo para somar com os 53px da imagem, resultando nos 135px q vc deseja q tenha de altura do topo */
+  padding: 43px 1rem;
 }
 
 .topo .logo {
-  width: 176px;
-
-  /* height: auto; altura tem valor 'auto' por padrão */
-  /* padding-left: 2rem; coloquei esse padding no canto certo, q foi no conteinar q guarda ele (.topo) *2 */
+  height: 53px;
+  padding-left: 2rem;
 }
 
 .pesquisa {
-  /* height: 350px; *1 */
-  padding: 126px 50px; /* *1 */
+  padding: 79.5px 10px;
   background: linear-gradient(
       90deg,
       rgba(1, 4, 58, 0.8) 0%,
@@ -47,13 +39,12 @@ body {
 .pesquisa .caixaDePesquisa {
   max-width: 544px;
   width: 100%;
-  /* height: 53px; *1 */
+  padding: 18px 33px;
   border-radius: 40px;
   background: #fff;
   align-items: center;
   box-shadow: 0px 0px 5px black;
   border: 0px;
-  padding: 18px 22px;
   outline-style: none;
   display: flex;
   align-items: center;
