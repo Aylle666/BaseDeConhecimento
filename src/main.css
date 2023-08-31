@@ -47,7 +47,7 @@ body {
 .pesquisa .caixaDePesquisa {
   max-width: 544px;
   width: 100%;
-  height: 53px;
+  /* height: 53px; *1 */
   border-radius: 40px;
   background: #fff;
   align-items: center;
@@ -62,7 +62,8 @@ body {
 
 .pesquisa .caixaDePesquisa #caixaDePesquisa {
   border: 0;
-  flex-grow: 1;
+  /* flex-grow: 1; */
+  width: 100%;
 }
 
 .pesquisa .caixaDePesquisa #caixaDePesquisa::placeholder {
@@ -148,6 +149,15 @@ body {
     font-size: 22px;
   }
 
+  .pesquisa .caixaDePesquisa #caixaDePesquisa::placeholder {
+    font-size: 18px !important;
+  }
+
+  .pesquisa .caixaDePesquisa {
+    padding-top: 10px;
+    padding-bottom: 10px;
+  }
+
   .pesquisa .caixaDePesquisa img {
     width: 22px;
   }
@@ -155,4 +165,20 @@ body {
 
 /* MOBILE */
 @media only screen and (max-width: 425px) {
+  .pesquisa .texto {
+    font-size: 16px;
+  }
+
+  .pesquisa .caixaDePesquisa {
+    padding-top: 10px;
+    padding-bottom: 10px;
+  }
+
+  .pesquisa .caixaDePesquisa #caixaDePesquisa::placeholder {
+    font-size: 16px !important;
+  }
+
+  .pesquisa .caixaDePesquisa img {
+    width: 16px;
+  }
 }
