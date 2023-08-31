@@ -1,18 +1,15 @@
 body {
-  height: 100vh;
+  min-height: 100vh;
   display: flex;
   flex-direction: column;
 }
 
 .topo {
-  display: flex;
-  align-items: center;
-  height: 135px;
+  padding: 43px 1rem;
 }
 
 .topo .logo {
-  width: 176px;
-  height: auto;
+  height: 53px;
   padding-left: 2rem;
 }
 
