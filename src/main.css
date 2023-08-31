@@ -1,5 +1,5 @@
 body {
-  height: 100vh;
+  min-height: 100vh;
   display: flex;
   flex-direction: column;
 }
@@ -7,17 +7,22 @@ body {
 .topo {
   display: flex;
   align-items: center;
-  height: 135px;
+
+  /* height: 135px; a altura tem q ser a soma to tamanho do conteúdo e os respectivos espaçamentos (paddings e margins) *1 */
+  /* O padding tem q ser aplicado na caixa e não no conteúdo *2 */
+  padding: 41px 1rem; /* 41px em cima e abaixo para somar com os 53px da imagem, resultando nos 135px q vc deseja q tenha de altura do topo */
 }
 
 .topo .logo {
   width: 176px;
-  height: auto;
-  padding-left: 2rem;
+
+  /* height: auto; altura tem valor 'auto' por padrão */
+  /* padding-left: 2rem; coloquei esse padding no canto certo, q foi no conteinar q guarda ele (.topo) *2 */
 }
 
 .pesquisa {
-  height: 350px;
+  /* height: 350px; *1 */
+  padding: 126px 50px; /* *1 */
   background: linear-gradient(
       90deg,
       rgba(1, 4, 58, 0.8) 0%,
@@ -134,4 +139,20 @@ body {
   width: 15px;
   height: 15px;
   border-radius: 50%;
+}
+
+/* TABLET */
+@media only screen and (max-width: 768px) and (min-width: 425px) {
+  /* O TAMANHO SE ALTERA APENAS A PARTIR DO TAMANHO DO TABLET */
+  .pesquisa .texto {
+    font-size: 22px;
+  }
+
+  .pesquisa .caixaDePesquisa img {
+    width: 22px;
+  }
+}
+
+/* MOBILE */
+@media only screen and (max-width: 425px) {
 }
