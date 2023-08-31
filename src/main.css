@@ -5,16 +5,24 @@ body {
 }
 
 .topo {
-  padding: 43px 1rem;
+  display: flex;
+  align-items: center;
+
+  /* height: 135px; a altura tem q ser a soma to tamanho do conteúdo e os respectivos espaçamentos (paddings e margins) *1 */
+  /* O padding tem q ser aplicado na caixa e não no conteúdo *2 */
+  padding: 41px 1rem; /* 41px em cima e abaixo para somar com os 53px da imagem, resultando nos 135px q vc deseja q tenha de altura do topo */
 }
 
 .topo .logo {
-  height: 53px;
-  padding-left: 2rem;
+  width: 176px;
+
+  /* height: auto; altura tem valor 'auto' por padrão */
+  /* padding-left: 2rem; coloquei esse padding no canto certo, q foi no conteinar q guarda ele (.topo) *2 */
 }
 
 .pesquisa {
-  padding: 79.5px 10px;
+  /* height: 350px; *1 */
+  padding: 126px 50px; /* *1 */
   background: linear-gradient(
       90deg,
       rgba(1, 4, 58, 0.8) 0%,
@@ -38,13 +46,14 @@ body {
 
 .pesquisa .caixaDePesquisa {
   max-width: 544px;
-  width: 100%;
-  padding: 18px 33px;
+  /* width: 100%; essa propriedade está sobrescrevendo o max-wdit */
+  /* height: 53px; aquele problema do *1 */
   border-radius: 40px;
   background: #fff;
   align-items: center;
   box-shadow: 0px 0px 5px black;
   border: 0px;
+  padding: 10px 22px;
   outline-style: none;
   display: flex;
   align-items: center;
@@ -53,8 +62,7 @@ body {
 
 .pesquisa .caixaDePesquisa #caixaDePesquisa {
   border: 0;
-  /* flex-grow: 1; */
-  width: 100%;
+  flex-grow: 1;
 }
 
 .pesquisa .caixaDePesquisa #caixaDePesquisa::placeholder {
@@ -82,23 +90,8 @@ body {
   justify-content: center;
   flex-wrap: wrap;
   height: 50%;
-  width: 50%;
+  /* width: 50%; deixa ele crescer tudo, a largura é limitada pelo padding do sessaoPrincipal */
   gap: 20px;
-}
-
-.sessaoPrincipal .baseDeConhecimento .mobbyCidade {
-}
-
-.sessaoPrincipal .baseDeConhecimento .mobbyDocs {
-}
-
-.sessaoPrincipal .baseDeConhecimento .mobbyCandidato {
-}
-
-.sessaoPrincipal .baseDeConhecimento .ticket {
-}
-
-.sessaoPrincipal .baseDeConhecimento .solucoes {
 }
 
 .sessaoPrincipal .carrossel {
@@ -135,41 +128,37 @@ body {
 
 /* TABLET */
 @media only screen and (max-width: 768px) and (min-width: 425px) {
+}
+
+/* MOBILE */
+@media only screen and (max-width: 425px) {
+}
+
+/* MOBILE AND TABLE */
+@media only screen and (min-width: 320px) and (max-width: 768px) {
   /* O TAMANHO SE ALTERA APENAS A PARTIR DO TAMANHO DO TABLET */
   .pesquisa .texto {
     font-size: 22px;
   }
 
-  .pesquisa .caixaDePesquisa #caixaDePesquisa::placeholder {
+  .pesquisa .caixaDePesquisa {
+    max-width: 350px;
+  }
+
+  .pesquisa .caixaDePesquisa input {
+    max-width: 350px;
+  }
+
+  .pesquisa .caixaDePesquisa input::placeholder {
     font-size: 18px !important;
   }
 
-  .pesquisa .caixaDePesquisa {
-    padding-top: 10px;
-    padding-bottom: 10px;
-  }
-
   .pesquisa .caixaDePesquisa img {
-    width: 22px;
-  }
-}
-
-/* MOBILE */
-@media only screen and (max-width: 425px) {
-  .pesquisa .texto {
-    font-size: 16px;
+    width: 18px;
   }
 
-  .pesquisa .caixaDePesquisa {
-    padding-top: 10px;
-    padding-bottom: 10px;
-  }
-
-  .pesquisa .caixaDePesquisa #caixaDePesquisa::placeholder {
-    font-size: 16px !important;
-  }
-
-  .pesquisa .caixaDePesquisa img {
-    width: 16px;
+  .sessaoPrincipal .baseDeConhecimento {
+    flex-direction: column;
+    gap: 20px;
   }
 }
