@@ -1,23 +1,21 @@
 .sessaoPrincipal .baseDeConhecimento .conteudoDaBaseDeConhecimento30 {
   width: 30%;
-  height: 180px;
   display: flex;
   align-items: center;
   justify-content: center;
   flex-direction: column;
-  padding: 0 25px;
+  padding: 15px 25px;
   text-align: center;
   box-shadow: 2px 2px 2px 2px rgba(0, 0, 0, 0.2);
 }
 
 .sessaoPrincipal .baseDeConhecimento .conteudoDaBaseDeConhecimento50 {
   width: 40%;
-  height: 180px;
   display: flex;
   align-items: center;
   justify-content: center;
   flex-direction: column;
-  padding: 0 25px;
+  padding: 15px 25px;
   text-align: center;
   box-shadow: 2px 2px 2px 2px rgba(0, 0, 0, 0.2);
 }
