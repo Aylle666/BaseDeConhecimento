@@ -4,8 +4,6 @@ body {
   flex-direction: column;
 }
 
-/* removendo o margin da tag em todas as p */
-
 p {
   margin: 0;
 }
@@ -13,22 +11,15 @@ p {
 .topo {
   display: flex;
   align-items: center;
-
-  /* height: 135px; a altura tem q ser a soma to tamanho do conteúdo e os respectivos espaçamentos (paddings e margins) *1 */
-  /* O padding tem q ser aplicado na caixa e não no conteúdo *2 */
-  padding: 41px 1rem; /* 41px em cima e abaixo para somar com os 53px da imagem, resultando nos 135px q vc deseja q tenha de altura do topo */
+  padding: 41px 1rem;
 }
 
 .topo .logo {
   width: 176px;
-
-  /* height: auto; altura tem valor 'auto' por padrão */
-  /* padding-left: 2rem; coloquei esse padding no canto certo, q foi no conteinar q guarda ele (.topo) *2 */
 }
 
 .pesquisa {
-  /* height: 350px; *1 */
-  padding: 126px 50px; /* *1 */
+  padding: 126px 50px;
   background: linear-gradient(
       90deg,
       rgba(1, 4, 58, 0.8) 0%,
@@ -52,8 +43,6 @@ p {
 
 .pesquisa .caixaDePesquisa {
   max-width: 544px;
-  /* width: 100%; essa propriedade está sobrescrevendo o max-wdit */
-  /* height: 53px; aquele problema do *1 */
   border-radius: 40px;
   background: #fff;
   align-items: center;
@@ -84,7 +73,9 @@ p {
 .sessaoPrincipal {
   display: flex;
   flex-wrap: wrap;
-  padding: 50px 50px;
+  /* padding: 50px 50px; */
+  padding: 50px; /* Faz a mesma coias q em cima */
+  gap: 20px; /* Separa as subsessões da sessão principal */
   flex-grow: 1;
   flex-direction: column;
   justify-content: center;
@@ -96,63 +87,62 @@ p {
   justify-content: center;
   flex-wrap: wrap;
   height: 50%;
-  /* width: 50%; deixa ele crescer tudo, a largura é limitada pelo padding do sessaoPrincipal */
   gap: 20px;
 }
 
 .sessaoPrincipal .carrossel {
   width: 100%;
-  /* height: 50%;  */
+  max-width: 1024px;
   display: flex;
-  padding: 50px;
   justify-content: center;
+  padding: 50px 0;
+  position: relative;
+  /* Esconda todo conteudo q saia da caixa de imagens */
+  overflow: hidden;
 }
 
 .sessaoPrincipal .carrossel .imagens {
-  /* background-image: url("https://dados-suporte.s3.sa-east-1.amazonaws.com/%5BMOBBY+APPS%5D+SLIDE+CENTRAL+DE+AJUDA+copiar.png");
-  background-size: cover;
-  background-repeat: no-repeat; */
-  /* Nessa estrutura de carrossel, melhor usar as tag images */
-  position: relative;
   height: 100%;
-  width: 100%;
+
+  /* Quando o javascript aplicar o translateX, demore 500ms pra fazer isso */
+  transition: 500ms;
+  /* alinhe as imagens na horizontal */
+  display: flex;
+  flex-grow: 1;
+  gap: 24px;
 }
 
 .sessaoPrincipal .carrossel .imagens .imagem {
   width: 100%;
 }
 
-.sessaoPrincipal .carrossel .imagens .controlesDeImagem {
+.sessaoPrincipal .carrossel .controlesDeImagem {
   position: absolute;
   gap: 12px;
   display: flex;
-  bottom: 20px;
-  left: 20px;
+  /* Reajuste de posição dos botoes de controle do carrossel */
+  bottom: 15%;
+  left: 10%;
 }
 
-.sessaoPrincipal .carrossel .imagens .controlesDeImagem .controle {
+.sessaoPrincipal .carrossel .controlesDeImagem .controle {
   border: solid white;
   width: 15px;
   height: 15px;
   border-radius: 50%;
 }
 
-/* pinta de branco o botão da imagem selecionada */
-.sessaoPrincipal .carrossel .imagens .controlesDeImagem .controle.selected {
+.sessaoPrincipal .carrossel .controlesDeImagem .controle.selected {
   background-color: white;
 }
 
-/* TABLET */
 @media only screen and (max-width: 768px) and (min-width: 425px) {
 }
 
-/* MOBILE */
 @media only screen and (max-width: 425px) {
 }
 
-/* MOBILE AND TABLE */
 @media only screen and (min-width: 320px) and (max-width: 768px) {
-  /* O TAMANHO SE ALTERA APENAS A PARTIR DO TAMANHO DO TABLET */
   .pesquisa .texto {
     font-size: 22px;
   }
@@ -176,5 +166,9 @@ p {
   .sessaoPrincipal .baseDeConhecimento {
     flex-direction: column;
     gap: 20px;
+  }
+
+  .sessaoPrincipal .carrossel {
+    padding: 0;
   }
 }
