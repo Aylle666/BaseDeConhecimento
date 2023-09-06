@@ -155,4 +155,12 @@ body {
   
 }
 
+@media only screen and (width: 425px) {
+  .pesquisa .texto {
 
+    font-size: 16px;
+  }
+
+  
+
+}
