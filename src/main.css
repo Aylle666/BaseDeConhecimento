@@ -5,16 +5,16 @@ body {
 }
 
 .topo {
-  padding: 43px 1rem;
+  padding: 17px 1rem;
 }
 
 .topo .logo {
   width: 176px;
-  
 }
 
 .pesquisa {
-  padding: 79.5px 10px;
+  padding: 88px 50px;
+  /*height: 350px;*/
   background: linear-gradient(
       90deg,
       rgba(1, 4, 58, 0.8) 0%,
@@ -34,12 +34,14 @@ body {
   color: white;
   font-size: 30px;
   font-family: sans-serif;
+  margin-bottom: 20px;
 }
 
 .pesquisa .caixaDePesquisa {
   max-width: 544px;
   width: 100%;
-  padding: 18px 33px;
+  height: 57px;
+  padding: 15px 16px 15px 30px;
   border-radius: 40px;
   background: #fff;
   align-items: center;
@@ -47,7 +49,6 @@ body {
   border: 0px;
   outline-style: none;
   display: flex;
-  align-items: center;
   gap: 12px;
 }
 
@@ -57,23 +58,25 @@ body {
 }
 
 .pesquisa .caixaDePesquisa #caixaDePesquisa::placeholder {
-  color: #746a6a;
+  color: #b9b1b1;
   font-family: sans-serif;
-  font-size: 20px;
+  font-size: 18px;
   font-style: normal;
   font-weight: 400;
   line-height: normal;
-  text-align: center;
+  /* text-align: center; */
 }
 
 .sessaoPrincipal {
   display: flex;
   flex-wrap: wrap;
-  padding: 50px 50px;
+  padding-bottom: 50px;
+  padding-top: 50px;
   flex-grow: 1;
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  width: 100%;
 }
 
 .sessaoPrincipal .baseDeConhecimento {
@@ -104,21 +107,25 @@ body {
   width: 50%;
   height: 50%;
   display: flex;
-  padding: 50px;
   justify-content: center;
 }
 
 .sessaoPrincipal .carrossel .imagens {
-  background-image: url("https://dados-suporte.s3.sa-east-1.amazonaws.com/%5BMOBBY+APPS%5D+SLIDE+CENTRAL+DE+AJUDA+copiar.png");
+  /* background-image: url("https://dados-suporte.s3.sa-east-1.amazonaws.com/%5BMOBBY+APPS%5D+SLIDE+CENTRAL+DE+AJUDA+copiar.png"); */
   background-size: cover;
   background-repeat: no-repeat;
   position: relative;
+  margin-top: 20px;
   height: 100%;
   width: 100%;
+  align-items: center;
 }
 
+.sessaoPrincipal .carrossel .imagens img {
+  width: 100%;
+}
 .sessaoPrincipal .carrossel .imagens .controlesDeImagem {
-  position: absolute;02
+  position: absolute;
   gap: 12px;
   display: flex;
   bottom: 20px;
@@ -130,37 +137,20 @@ body {
   width: 15px;
   height: 15px;
   border-radius: 50%;
+  background-color: white;
 }
 
-/*tablet*/
+/* TABLET */
 @media only screen and (max-width: 768px) and (min-width: 425px) {
-  /*Sempre que a resolução da tela for entre 768 à 425px a telera receberá as seguintes alterações*/
+}
+
+/* MOBILE */
+@media only screen and (max-width: 425px) {
+}
+
+/* MOBILE AND TABLE */
+@media only screen and (min-width: 320px) and (max-width: 768px) {
+  /* O TAMANHO SE ALTERA APENAS A PARTIR DO TAMANHO DO TABLET */
   .pesquisa .texto {
     font-size: 22px;
-  }
-
-  .pesquisa .caixaDePesquisa #caixaDePesquisa::placeholder {
-    font-size: 18px !important;
-  }
-
-  .pesquisa .caixaDePesquisa {
-    padding-top: 10px;
-    padding-bottom: 10px;
-  }
-
-  .pesquisa .caixaDePesquisa img {
-    width: 22px;
-  }
-
-  
-}
-
-@media only screen and (width: 425px) {
-  .pesquisa .texto {
-
-    font-size: 16px;
-  }
-
-
-
 }
