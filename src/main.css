@@ -55,6 +55,7 @@ body {
 .pesquisa .caixaDePesquisa #caixaDePesquisa {
   border: 0;
   flex-grow: 1;
+  outline: none;
 }
 
 .pesquisa .caixaDePesquisa #caixaDePesquisa::placeholder {
@@ -70,8 +71,7 @@ body {
 .sessaoPrincipal {
   display: flex;
   flex-wrap: wrap;
-  padding-bottom: 50px;
-  padding-top: 50px;
+  padding: 50px;
   flex-grow: 1;
   flex-direction: column;
   justify-content: center;
@@ -104,10 +104,10 @@ body {
 }
 
 .sessaoPrincipal .carrossel {
-  width: 50%;
-  height: 50%;
   display: flex;
   justify-content: center;
+  overflow: hidden;
+  position: relative;
 }
 
 .sessaoPrincipal .carrossel .imagens {
@@ -116,15 +116,22 @@ body {
   background-repeat: no-repeat;
   position: relative;
   margin-top: 20px;
-  height: 100%;
-  width: 100%;
   align-items: center;
+  display: flex;
+  max-width: 1024px;
+  gap: 24px;
+  transition: 500ms ease-in-out 200ms;
+}
+
+.sessaoPrincipal .carrossel .imagens img:first {
+  padding-left: 24px;
 }
 
 .sessaoPrincipal .carrossel .imagens img {
   width: 100%;
+  object-position: center;
 }
-.sessaoPrincipal .carrossel .imagens .controlesDeImagem {
+.sessaoPrincipal .carrossel .controlesDeImagem {
   position: absolute;
   gap: 12px;
   display: flex;
@@ -132,11 +139,14 @@ body {
   left: 20px;
 }
 
-.sessaoPrincipal .carrossel .imagens .controlesDeImagem .controle {
+.sessaoPrincipal .carrossel .controlesDeImagem .controle {
   border: solid white;
-  width: 15px;
-  height: 15px;
+  border-width: 1px;
   border-radius: 50%;
+  padding: 4px;
+}
+
+.sessaoPrincipal .carrossel .controlesDeImagem #controle-1 {
   background-color: white;
 }
 
