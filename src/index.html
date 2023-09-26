@@ -26,29 +26,40 @@
           placeholder="Digite aqui sua dúvida"
           type="text"
           id="caixaDePesquisa"
+          onkeyup="filtrarDuvidas(event)"
         />
       </label>
     </div>
     <!-- teste -->
     <div class="sessaoPrincipal">
       <div class="baseDeConhecimento">
-        <div class="mobbyCidade conteudoDaBaseDeConhecimento30">
+        <div
+          class="baseDeConhecimentoElemento mobbyCidade conteudoDaBaseDeConhecimento30"
+        >
           <img src="../assets/image/Logo Mobby Cidade.png" alt="mobbyCidade" />
           <p>Base de conhecimento Mobby Cidade</p>
         </div>
-        <div class="mobbyDocs conteudoDaBaseDeConhecimento30">
+        <div
+          class="baseDeConhecimentoElemento mobbyDocs conteudoDaBaseDeConhecimento30"
+        >
           <img src="../assets/image/Docs.png" alt="mobbyDocs" />
           <p>Base de conhecimento Mobby Docs</p>
         </div>
-        <div class="mobbyCandidato conteudoDaBaseDeConhecimento30">
+        <div
+          class="baseDeConhecimentoElemento mobbyCandidato conteudoDaBaseDeConhecimento30"
+        >
           <img src="../assets/image//Group 1.png" alt="mobbyCandidato" />
           <p>Base de conhecimento Mobby Candidato</p>
         </div>
-        <div class="ticket conteudoDaBaseDeConhecimento50">
+        <div
+          class="baseDeConhecimentoElemento ticket conteudoDaBaseDeConhecimento50"
+        >
           <img src="../assets/image/internet+1 1.png" alt="tickets" />
           <p>Veja seus tickets</p>
         </div>
-        <div class="solucoes conteudoDaBaseDeConhecimento50">
+        <div
+          class="baseDeConhecimentoElemento solucoes conteudoDaBaseDeConhecimento50"
+        >
           <img src="../assets/image/entrevista+1+(1) 1.png" alt="solucoes" />
           <p>Nossas soluções</p>
         </div>
@@ -114,6 +125,7 @@
     </div>
   </body>
   <script src="./main.js"></script>
+  <script src="./filtroDuvidas.js"></script>
 </html>
 
 <!-- esse bloco é filho do carrossel -->
