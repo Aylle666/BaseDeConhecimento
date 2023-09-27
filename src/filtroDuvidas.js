@@ -1,31 +1,89 @@
 // Nesse processo estamos criando uma variável constante onde uma vez declarada seu valor não podera mais ser alterada.
 // É aplicada uma propriedade Titulo para entitular DuvidaAtendimento
-const duvidaAtendimento = {
-  titulo: "Atendimento",
-  descrição: "Entrada",
+const duvidaEntrada = {
+  titulo: "Entrada",
+  descrição:
+    "Na opção de entrada, é apresentado um panorama geral das solicitações dos cidadãos para o setor responsável, é possível visualizar a quantidade de solicitações em aberto, em atraso, em atendimento, atendimentos encerrados e itens para revisão.",
+  subCategorias: [],
+  palavrasChave: [
+    "Em",
+    "aberto",
+    "Solicitação",
+    "aguardando",
+    "atendimento;",
+    "atraso",
+    "e",
+    "passou",
+    "do",
+    "prazo",
+    "estipulado;",
+    "atendimento",
+    "pelo",
+    "agente;",
+    "Atendimentos",
+    "encerrados",
+    "encerrada",
+    "pelo",
+    "Itens",
+    "para",
+    "revisão",
+    "Sinalização",
+    "de",
+    "quantidade",
+    "produtos",
+    "comércio",
+    "local",
+    "validação.",
+  ],
 };
 
 const duvidaDashboard = {
   titulo: "Dashboard",
-  descrição: "Dashboard",
+  descrição:
+    "O Dashboard é dividido em algumas categorias. São elas: geral, serviços e inscrições. Com isso, o Dashboard ajuda a gestão municipal na tomada de decisões mais assertivas.",
+  subCategorias: [],
+  palavrasChave: [
+    "Contas Criadas",
+    "Protocolos Criados",
+    "Mensagens Enviadas",
+    "Agendamentos Criados",
+    "Publicações em Notícias",
+    "Publicações de Eventos",
+    "Produtos Cadastrados no Comércio Local",
+    "Vendedores Cadastrados no Comércio Local",
+    "Titulares Criados",
+    "Geral",
+    "Serviços",
+    "Inscrições",
+  ],
 };
 
-const duvidaAtendentesPorServiço = {
-  titulo: "duvidaAtendentesPorServiço",
+const duvidaAtendimentos = {
+  titulo: "Atendimentos",
   descrição:
     "AtendentesPorServiço, MapaDeAtendimento, RegistrarProtocolo, HistoricoDeProtocolo, AreaDeAtendimento",
 };
 
-const AgendamentosPresenciais = {
-  titulo: ""
-  descrição: 
-}
+const duvidaAgendamentosPresenciais = {
+  titulo: "duvidaAgendamentosPresenciais",
+  descrição: "areaDeAtendimento, configurações",
+  subCategorias: [{ titulo: "areaDoAtendimento" }, { titulo: "configurações" }],
+  palavrasChave: ["Agendamento", "Agendamento presencial", "presencial"],
+};
+
+duvidaAgendamentosPresenciais.palavrasChave.find((palavra) =>
+  palavra.includes("a")
+);
+duvidaAgendamentosPresenciais.subCategorias.find((subCategoria) =>
+  subCategoria.titulo.includes("a")
+);
 
 // esse Array, "arrayDeDuvidas" é um array que contem os elementos anteriores (variável constante), o agrupamento deles formam esse array
 const arrayDeDuvidas = [
   duvidaAtendimento,
   duvidaDashboard,
   duvidaAtendentesPorServiço,
+  duvidaAgendamentosPresenciais,
 ];
 
 // Aqui está sendo criada uma constante "baseDeConheCimento onde está recebendo o valor do array "arrayDeDuvidas"
